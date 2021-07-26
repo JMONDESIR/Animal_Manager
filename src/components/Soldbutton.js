@@ -8,17 +8,15 @@ const SoldButton = ({pet}) => {
 
   const onClick = async () => {
       pet.status = "sold"
-      console.log(pet)
     try {
         await API.update(pet, () => refresh('available'));
         Toastify({
             text: `${pet.name} successfully marked as "sold" `,
             duration: 3000,
-            destination: "https://github.com/apvarun/toastify-js",
             newWindow: true,
             close: true,
-            gravity: "top", // `top` or `bottom`
-            position: "left", // `left`, `center` or `right`
+            gravity: "bottom", // `top` or `bottom`
+            position: "right", // `left`, `center` or `right`
             backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
             stopOnFocus: true, // Prevents dismissing of toast on hover
             onClick: function(){} // Callback after click
@@ -26,16 +24,15 @@ const SoldButton = ({pet}) => {
     } catch(e) {
         console.error(e)
     }
-
-    // await refresh(updateText.toLowerCase())
+  }
   
   return (
-    <button
+  <button
       onClick={onClick}
       className='btn'>Sold
     </button>
   )
-  }
+  
 }
 
 export default SoldButton

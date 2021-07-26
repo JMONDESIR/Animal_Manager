@@ -28,8 +28,8 @@ const useStyles = makeStyles({
 });
 
 export default function StickyHeadTable({}) {
-  const {availableAnimals: animals = []} = useContext(AnimalsContext)
-  const rows = animals
+  const {availableAnimals = []} = useContext(AnimalsContext)
+  const rows = availableAnimals
   const classes = useStyles();
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);

@@ -6,6 +6,7 @@ const App =() => {
 
   return (
     <div className="container">
+      {/* context API allows */}
       <AnimalsProvider>
         <Header title='PET MANAGER' />
         <Table />

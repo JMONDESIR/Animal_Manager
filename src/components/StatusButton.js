@@ -6,11 +6,10 @@ const StatusButton = () => {
 
   const {refresh} = useContext(AnimalsContext)
 
-
   const onClick = async () => {
-    const updateText = text === 'Available' ? 'Sold' : 'Available'
-    setText(updateText)
-    await refresh(updateText.toLowerCase())
+    const status = text === 'Available' ? 'Sold' : 'Available'
+    setText(status)
+    await refresh(status.toLowerCase())
   }
 
   return (
