@@ -15,7 +15,7 @@ const StatusButton = () => {
   return (
     <button
       onClick={onClick}
-      className='btn'> View {text}
+      className='btn'> View: {text}
     </button>
   )
 }
